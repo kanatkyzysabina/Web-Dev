@@ -1,0 +1,244 @@
+*{
+    font-family: sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    background-color: white;
+}
+button{
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.container{
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    margin: 0 auto;
+}
+
+.top-section{
+    text-align: center;
+    width: 100%;
+}
+.top-section h1{
+    padding: 5px;
+
+}
+.top-section p{
+    max-width: 520px;
+    font-size: 10px;
+    padding: 15px 0px;
+    line-height: 1.5;
+    margin: 0 auto;
+}
+.top-section button{
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background: linear-gradient(rgba(0, 0, 0, 0.78), black);
+    padding: 8px;
+    font-size: 10px;
+}
+
+.tier-cards{
+    font-size: 10px;
+    align-items: stretch;
+    display: flex;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    gap: 24px;
+}
+
+
+.card-title{
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+    padding: 5px 15px 5px;
+    text-align: center;
+    background-color: rgb(246, 246, 246);
+    box-shadow: 0px 0px 50px rgba(177, 177, 177, 0.794);
+    border-radius: 6px;
+    border: 1px solid rgb(137, 137, 137);
+}
+.free, .team, .enterprise{
+    margin: 0 auto;
+   
+}
+
+.top-card p{
+    color: gray;
+    max-width: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 8px;
+    padding-top: 4px;
+    margin: 0 auto;
+}
+
+.white-button{
+    width: 100%;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 5px;
+    background: white;
+    padding: 7px;
+    font-size: 10px;
+    margin: 8px auto;
+
+}
+.black-button{
+    width: 100%;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background: linear-gradient(rgba(0, 0, 0, 0.78), black);
+    padding: 7px;
+    font-size: 10px;
+    margin: 8px auto;
+
+}
+.two-buttons .black-button, .two-buttons .white-button{
+    font-size: 8px;
+}
+.two-buttons{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 5px;
+    margin: 5px auto;
+    gap: 5px;
+    
+}
+
+.price{
+    margin-top: 15px;
+    font-size: 25px;
+}
+.sup{
+    font-size: 10px;
+    font-weight: 200;
+}
+.usd{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.sections{
+    text-align: start;
+    color: rgb(68, 68, 68);
+}
+
+summary{
+    font-weight: bold;
+}
+summary:hover{
+    text-decoration: none;
+}
+
+details{
+    font-size: 7px;
+    padding: 4px 0;
+}
+
+.recommended-card{
+    border: 3px solid rgb(66, 120, 220);
+    position: relative;
+
+}
+.recommended{
+    position: absolute;
+    top: -20px;
+    left: 0%;
+    background-color: rgb(66, 120, 220);
+    border-radius: 5px;
+    padding: 4px 20px;
+    color: white;
+    font-weight: 600;
+    width: 100%;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+}
+
+
+.featured-add-ons{
+    color: rgb(66, 120, 220);
+    padding: 5px;
+}
+
+.add-ons-sections{
+    text-align: start;
+    color: rgb(68, 68, 68);
+}
+
+
+.add-ons-title{
+    text-align: center;
+}
+
+
+.additional-add-ons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-add-ons, .bottom-add-ons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.add-ons-box{
+    max-width: 220px;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: rgba(128, 128, 128, 0.122);
+
+    border: 1px solid rgb(189, 189, 189);
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px rgb(204, 204, 204);
+    font-size: 12px;
+    padding: 20px;
+    gap: 8px;
+
+    transition: transform 0.5s ease, box-shadow 0.5s ease, background-color 0.5s ease;
+}
+.add-ons-box p{
+    color: rgb(88, 88, 88);
+}
+.add-ons-box p b{
+    color: black
+}
+
+.add-ons-box:hover{
+    transform: scale(1.05) translateY(-2px);
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+
+}
+.icon-row{
+    display: flex;
+    align-items: center;
+    gap: 120px;
+}
+.new{
+    color: rgb(110, 182, 110);
+    border: 1px solid;
+    padding: 3px 6px;
+    border-radius: 15px;
+}
