@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<script>
+"use strict";
+    //OR (||)
+    alert( 1 || 0 ); // 1 (1 is truthy)
+    alert( null || 1 ); // 1 (1 is the first truthy value)
+    alert( null || 0 || 1 ); // 1 (the first truthy value)
+    alert( undefined || null || 0 ); // 0 (all falsy, returns the last value)
+
+    //AND(&&)
+    let hour = 12;
+    let minute = 30;
+    if (hour == 12 && minute == 30)
+    alert( 'The time is 12:30' );
+
+    //!(NOT)
+    alert( !true ); // false
+    alert( !0 ); // true
+
+
+    //TASKS
+    // task1 - code will output 2
+    // task 2 - output is 1 then 2
+    // task 3 - output is null
+    // task 4 - output is 1
+    // task 5 - output is 3
+    // task 6 
+    if (age >= 14 && age <= 90){};
+    // task 7
+    if (age < 14 || age > 90){};
+    // task 8 - 1st and 3rd executes
+    // task 9
+    let userName = prompt("Who's there?", '');
+    if (userName === 'Admin') {
+    let pass = prompt('Password?', '');
+    if (pass === 'TheMaster') {
+        alert( 'Welcome!' );
+    } else if (pass === '' || pass === null) {
+        alert( 'Canceled' );
+    } else {
+        alert( 'Wrong password' );
+    }
+    } else if (userName === '' || userName === null) {
+    alert( 'Canceled' );
+    } else {
+    alert( "I don't know you" );
+    }
+    
+</script>

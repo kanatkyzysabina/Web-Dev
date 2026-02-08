@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        //how to make modern code work on older engines?
+        // two tools for that:
+
+        // 1 - Transpilers
+        //translates source code to another source code. Rewrites mdoern code using older syntax.
+        
+        // before running the transpiler
+        height = height ?? 100;
+        // after running the transpiler
+        //height = (height !== undefined && height !== null) ? height
+
+        // 2 - Polyfills
+        // scripts that updates/adds new functions called polyfill. 
+        //Fills in gap and adds missing implementations
+        if (!Math.trunc) { // if no such function
+            // implement it
+            Math.trunc = function(number) {
+                // Math.ceil and Math.floor exist even in ancient JavaScript engines
+                // they are covered later in the tutorial
+                return number < 0 ? Math.ceil(number) : Math.floor(number);
+            };
+        }
+
+        
+
+    </script>
+</html>

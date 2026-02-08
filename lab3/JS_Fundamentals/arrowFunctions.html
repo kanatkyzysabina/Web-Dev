@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<script>
+    "use strict";
+
+    let sum = (a, b) => a + b;
+    /* This arrow function is a shorter form of:
+    let sum = function(a, b) {
+    return a + b;
+    };
+    */
+    alert( sum(1, 2) ); // 3
+    //no arg arrow func
+    let sayHi = () => alert('HEllo!');
+
+    //multinine arrow functions
+    let sum2 = (a, b) => 
+    {
+        let res = a+b;
+        return res;
+    };
+    alert(sum(1,2));
+
+    // TASKS
+    //task1
+    let ask = (question, yes, no) => {
+        if(confirm(question)) yes();
+        else no();
+    };
+    ask("Do you agree?",
+        ()=> alert("you agreed"),
+        ()=> alert("you canceled execution")
+    );
+
+
+</script>

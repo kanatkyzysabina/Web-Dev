@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<script>
+"use strict";
+    //WHILE 
+    let i=0;
+    while(i<3){
+        alert(i);
+        i++;
+    }
+
+    //FOR
+    for (let i = 0; i < 3; i++) { // shows 0, then 1, then 2
+    alert(i);
+    }
+
+    //Labels for break/continue
+    outer: for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+        let input = prompt(`Value at coords (${i},${j})`, '');
+        // if an empty string or canceled, then break out of both loops
+        if (!input) break outer; // (*)
+        // do something with the value...
+        }
+    }
+
+    //TASKS
+    //task 1
+    //last loop value is 1
+
+    //task 2
+    //let i = 0;
+    //while (++i < 5) alert( i ); - this one shows 1 2 3 4
+    //let i = 0;
+    //while (i++ < 5) alert( i ); - this one shows 1 2 3 4 5
+
+    //task 3
+    //executes from 0 to 4 in both cases
+
+    //task 4
+    for (let i = 2; i <= 10; i++) {
+        if (i % 2 == 0) {
+            alert( i );
+        }
+    }
+
+    //task 5
+    let j = 0;
+    while (j < 3) {
+        alert( `number ${j}!` );
+        j++;
+    }
+
+    //task 6
+    while(true){
+        let age = prompt("Enter number", "");
+        if(age == 100){
+            alert("Input is correct!")
+            break;
+        }
+    }
+    
+
+    //task 7
+    let n = prompt("Enter number: ", "");
+    nextPrime: for(let i=2; i<n; i++){
+        for(let j=2; j<i; j++){
+            if(i % j == 0) continue nextPrime;
+        }
+        alert(i);
+    }
+
+
+
+alert('Done!');
+        
+</script>
