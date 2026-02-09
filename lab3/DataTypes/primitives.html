@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<script>
+    /*
+    A primitive
+Is a value of a primitive type.
+There are 7 primitive types: string, number, bigint, boolean, symbol, null and undefined.
+    
+    An object
+Is capable of storing multiple values as properties.
+Can be created with {}, for instance: {name: "John", age: 30}. 
+There are other kinds of objects in JavaScript: functions, for example, are objects.
+    */
+
+    let john = {
+        name: "John",
+        sayHi: function() {
+            alert("Hi Buddy!");
+        }
+    };
+    john.sayHi();
+
+    //Constructors String/Number/Boolean are for internal use only
+    //in JS explicit create of "wrapper objects" for primitives is
+    //possible but NOT reccommended!!
+    alert(typeof(0)); //num
+    alert(typeof new Number(0)); //obj - they are always truthy
+    //However using them to convert a value to another data type is VALID:
+    let num = Number("123");
+    // null and undefined - DONT HAVE METHODS AND WRAPPER OBJECTS
+
+
+    //TASK - can i add a string property?
+    let str = "Hello";
+    str.test = 5;
+    alert(str.test); // nothing will be shown (undefined)
+    
+
+</script>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        // difference between obj and primitives:
+        // obj are stored and copid by reference,
+        // while primitives by whole value
+
+        // copy of primitives
+        let msg = "Hello";
+        let phrase = msg;
+        // res - two independent variables
+        // variable assigned to an obj stores not obj but its address in memory
+        let user = {
+            name: "John"
+        };
+        // object is stored somewhere in memory 
+        // while the user variable has a “reference” to it.
+        let admin = user; //copies the reference
+        admin.name = "Pete";
+        alert(user.name);
+        //important side effect of storing objects as references
+        //is that an object declared as "const" can be modified.
+
+        // Object.assign methid
+        let permissions1 = {canView: true};
+        let permissions2 = {canEdit: true};
+        //copies all prop from perm1 and perm2 to user.
+        Object.assign(user, permissions1, permissions2);
+        //now:
+        alert(user.canEdit);
+        alert(user.canView);
+
+        //also to clone
+        let clone = Object.assign({}, user);
+        //now clone has all prop of user
+
+        // structuredClone(obj) clones the object with all NESTED properties
+        let user1 = {
+            name: "John",
+            sizes: {
+                height: 182,
+                width: 50
+            }
+        };
+        let clone1 = structuredClone(user1);
+        alert(user1.sizes == clone.sizes); //false, diff objects
+
+    </script>
+</html>

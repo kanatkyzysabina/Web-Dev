@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        "use strict";
+        // in case of obj1+obj2 or subtraction etc of objects
+        // objects are auto-converted to primitives, and then the operation is carried out over these primitives 
+        // and results in a primitive value.
+
+        // Conversion rules
+        /*
+        1) no conversion to boolean - all objects are true
+        2) numeric conversion happens when we subtract objects or apply mathematical functions.
+        For ex, dates can be subtracted and give Date obj
+        3) String conversion - when we output alert(obj) and etc
+        */
+
+        // Symbol.toPrimitive
+        let user = {
+        name: "John",
+        money: 1000,
+
+        [Symbol.toPrimitive](hint) {
+            alert(`hint: ${hint}`);
+            return hint == "string" ? `{name: "${this.name}"}` : this.money;
+        }
+        };
+
+        // conversions demo:
+        alert(user); // hint: string -> {name: "John"}
+        alert(+user); // hint: number -> 1000
+        alert(user + 500); // hint: default -> 1500
+
+        // toString / valueOf
+        //If there’s no Symbol.toPrimitive then JavaScript tries to find methods toString and valueOf.
+        //The toString method returns a string "[object Object]".
+        //The valueOf method returns the object itself.
+
+
+        
+    </script>
+</html>

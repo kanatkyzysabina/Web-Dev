@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        "use strict";
+        // Symbols - A “symbol” represents a primitive unique identifier.
+        // A value of this type can be created using Symbol():
+        let id = Symbol("101B"); // inside braskets "description"
+        // Symbols are guaranteed to be unique
+        // Even if we create many symbols with 
+        // exactly the same description, they 
+        // are different values.
+        let id2 = Symbol("101B")
+        alert(id == id2); // false
+        // alert(id) - this will give ERROR
+        alert(id2.toString());
+        alert(id2.description());
+
+        // Hidden properties - no other part of code can accidentally access or overwrite.
+        let user = {
+            name: "John"
+        };
+        let id_ = Symbol("id");
+        user[id_] = 1;
+        alert(user[id_]);
+
+        // Symbols in obj literal
+        let id_num = Symbol("id");
+        let user1 = {
+        name: "John",
+        [id_num]: 123 // not "id": 123
+        };
+        // Symbols are skipped by for…in!!!
+
+        // Global Symbol - Symbol.for(key);
+        let idFirst = Symbol.for("id"); // if the symbol did not exist, it is created
+        // read it again (maybe from another part of the code)
+        let idAgain = Symbol.for("id");
+        // the same symbol
+        alert( id === idAgain ); // true
+
+        // To return NAME by Global Symbol: Symbol.keyFor(sym)
+        let sym = Symbol.for("name");
+        let sym2 = Symbol.for("id");
+
+        // get name by symbol
+        alert( Symbol.keyFor(sym) ); // name
+        alert( Symbol.keyFor(sym2) ); // id
+
+        
+
+
+    </script>
+</html>

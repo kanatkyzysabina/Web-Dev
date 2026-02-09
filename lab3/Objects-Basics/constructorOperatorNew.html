@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        // Constructor functions:
+        // should be named with capital letter
+        // executed only with new operator
+        function User(name){
+            this.name = name;
+            this.isAdmin = false;
+        }
+        let user = new User("Jack");
+        alert(user.name);
+        alert(user.isAdmin);
+
+        // - -  TASKS - -
+        // task 1 - two functions - one object
+        // Answer: its possible if we write return with object that overrides return of this
+        let obj = {};
+        function A(){ return obj };
+        function B(){ return obj };
+        alert( new A() == new B() ); // true
+
+        // task 2 - new calculator
+        function Calculator(){
+            this.read = function(){
+                this.a = Number(prompt("write a", 0));
+                this.b = Number(prompt("write b", 0));
+            };
+            this.sum = function(){
+                return this.a + this.b;
+            }
+            this.mul = function(){
+                return this.a * this.b;
+            }
+        }
+
+        let calculator = new Calculator();
+        calculator.read();
+
+        alert( "Sum=" + calculator.sum() );
+        alert( "Mul=" + calculator.mul() );
+
+        // task 3 - crete new Accumulator
+        function Accumulator(startValue){
+            this.value = startValue;
+            this.read = function(){
+                this.value = Number(prompt("new value?", 0));
+            }
+        }
+        let accumulator = new Accumulator(1); // initial value 1
+
+        accumulator.read(); // adds the user-entered value
+        accumulator.read(); // adds the user-entered value
+
+        alert(accumulator.value); // shows the sum of these values
+
+    </script>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        
+        // empty obj
+        let user = new Object(); //obj constructor
+        let user2 = {}; //obj literal
+        //literals and properties
+        let us = {
+            name: "John", //key:value
+            age: 30
+        };
+        alert(us.age);
+        alert(us.name);
+
+        // to remove property
+        delete us.age;
+
+        // multiword property names
+        let person = {
+            name: "Sabina",
+            age: 19,
+            "likes cats": true
+        };
+        // to access multiword property
+        let human = {};
+        human["likes cats"] = true;
+        alert(human["likes cats"]);
+        delete human["likes cats"];
+        //or
+        let key = "likes dogs";
+        human[key] = false;
+        alert(human[key]);
+        delete human[key];
+
+        // user input
+        let key2 = prompt("What do you want to know about the user?", "name");
+        // access by variable
+        alert( us[key2] ); // John (if enter "name")
+
+        // computed properties - when we can use [] in obj literal
+        //let fruit = prompt("Which fruit to buy?", "apple");
+        //let bag = {
+        //   [fruit]: 5,};
+        //alert(bag.apple);
+
+        //more complex expressions in []
+        let fruit = 'apple';
+        let bag = {
+        [fruit + 'Pie']: 5 // bag.applePie = 5
+        };
+        // in properties no resrtictions for words like let, return etc
+        let obj = {
+        for: 1,
+        let: 2,
+        return: 3
+        };
+
+        // "in" operator - testing property existence
+        alert(user.noSuchProperty === undefined);
+        // or
+        let prop = "age";
+        alert(prop in us);
+        alert("name" in us);
+        alert("nothing" in us);
+
+        // for in loop
+        let student = {
+            name: "Alina",
+            age: 19,
+            id: 101,
+        };
+        for(let key in student){
+            alert(key);
+            alert(student[key]);
+        }
+        // integer obj properties are sorted!!
+        let ids = {
+            "102": "Sabina",
+            "101": "Alina",
+            "103": "Amanelle",
+        };
+        for(let id in ids){
+            alert(id);
+        }
+        // to not make int obj output sorted we can cheat:
+        let codes = {
+            "+49": "Germany",
+            "+41": "Switzerland",
+            "+1": "USA",
+        };
+        for(let code in codes){
+            alert(+code);
+        }
+
+        // - - TASKS - -
+
+        // task 1: Hello, object
+        let user0 = {};
+        user0[name]  = "John";
+        user0[surname]  = "Smith";
+        user0[name]  = "Pete";
+        delete user0[name];
+
+        // task 2: Check for emptiness
+        function isEmpty(obj){
+            for(let key in obj) {
+                return false;
+            }
+            return true;
+        }
+        let schedule = {};
+        alert(isEmpty(schedule));
+        schedule["8:30"] = "get up";
+        alert(isEmpty(schedule));
+
+        // task 3: Sum Obj Properties
+        let salaries = {
+            John: 100,
+            Ann: 160,
+            Pete: 130
+        }
+        let sum = 0;
+        for(let salary in salaries){
+            sum+=salaries[salary];
+        }
+        alert(sum);
+    
+
+        // task 4: Multiply numeric property values by 2
+        function multiplyNumeric(obj){
+            for(let num in obj){
+                if(typeof(obj[num]) == "number"){
+                    obj[num]*=2;
+                }
+            }
+        }
+        let menu = {
+            width: 200,
+            height: 300,
+            title: "My menu"
+        };
+
+        multiplyNumeric(menu);
+        alert(menu.width);
+        alert(menu.height);
+
+
+
+    </script>
+</html>

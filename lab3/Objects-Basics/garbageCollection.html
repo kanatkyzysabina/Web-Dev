@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        /*
+        main concept of memory management 
+        in JavaScript is reachability.
+        reachable values are those thata re acceessible or usable somehow
+
+        There’s a background process in the JavaScript engine 
+        that is called garbage collector. 
+        It monitors all objects and removes those that have 
+        become unreachable!
+        simple example: */
+        let user = {name: "John"};
+        // user references name, if name is overwritten -> 
+        // ref is lost - it becomes unreachable
+
+        // Internal algorithms:
+        // basic garbage collection algorithm is called 
+        // “mark-and-sweep”.
+        /*
+        Garbage collection in JS is optimized to be fast
+        Main optimizations:
+        - Generational collection: New objects are checked more often because most of them are used briefly. 
+          Objects that live longer are checked less often.
+        - Incremental collection: Memory is cleaned in small parts instead of all at once, so there are no big pauses.
+        - Idle-time collection: Garbage collection runs when the CPU is not busy.
+        */
+
+        
+
+
+
+
+
+    </script>
+</html>

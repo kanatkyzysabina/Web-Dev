@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        "use strict";
+        // method example
+        let user = {
+        name: "John",
+        age: 30 };
+
+        user.sayHi = function()
+        {
+        alert("Hello!");
+        };
+
+        user.sayHi(); // Hello!
+
+        // method shorthand
+        user = {
+        sayHi() { // same as "sayHi: function(){...}"
+            alert("Hello");}   
+        };
+
+        // this
+        let user = {
+        name: "John",
+        age: 30,
+
+        sayHi() {
+            // "this" is the "current object"
+            alert(this.name); }
+        };
+        user.sayHi();
+        // Calling without an object: this == undefined
+
+        // - - TASKS - -
+        // task 1: Using "this" in object literal
+        function makeUser() {
+            return {
+                name: "John",
+                ref: this
+            };
+        }
+
+        let user = makeUser();
+        //alert( user.ref.name ); // What's the result? 
+
+        // Answer: result is error
+
+        // task 2: create a calculator
+
+        let calculator = {
+            sum(){
+                return this.a + this.b;
+            },
+            mul(){
+                return this.a * this.b;
+            },
+            read(){
+                this.a = Number(prompt("1st number", 0));
+                this.b = Number(prompt("2nd number", 0));  
+            }
+        };
+
+        calculator.read();
+        alert( calculator.sum() );
+        alert( calculator.mul() );
+
+        // task 3: Chaining
+        let ladder = {
+        step: 0,
+        up() {
+            this.step++;
+            return this;
+        },
+        down() {
+            this.step--;
+            return this;
+        },
+        showStep: function() { // shows the current step
+            alert( this.step );
+            return this;
+            }
+        };
+        ladder.up().up().down().showStep().down().showStep();
+
+        
+
+        
+
+
+
+        
+    </script>
+</html>

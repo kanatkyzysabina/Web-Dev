@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        "use strict";
+        /* 
+        ?. stops the evaluation if the value 
+        before ?. is undefined or null 
+        and returns undefined.
+
+        In other words, value?.prop:
+        1) works as value.prop, if value exists,
+        2) otherwise (when value is undefined/null)
+        it returns undefined.
+        */
+       let user = {};
+       alert(user?.address?.street);
+
+       // ?.() is used to call a function that may not exist.
+       let userAdmin = {
+        admin() {
+            alert("I am admin");
+        }
+        };
+
+        let userGuest = {};
+
+        userAdmin.admin?.(); // I am admin
+
+        userGuest.admin?.(); // nothing happens (no such method)
+
+        // The ?.[] syntax also works, if we’d like to use brackets [] to access properties instead of dot 
+
+        // Also we can use ?. with delete:
+        delete user?.name; // delete user.name if user exists
+        
+
+                
+    </script>
+</html>
