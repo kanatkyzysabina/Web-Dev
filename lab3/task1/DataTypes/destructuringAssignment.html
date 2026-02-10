@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<script>
+    "use strict";
+    // Array desctructuring
+    let arr = ["John", "Smith"]
+
+    // sets firstName = arr[0]
+    // and surname = arr[1]
+    let [firstName, surname] = arr;
+
+    alert(firstName); // John
+    alert(surname);  // Smith
+
+    // the rest "..."
+    let [name1, name2, ...rest] = ["Julius", "Caesar", "Consul", "of the Roman Republic"];
+
+    // rest is an array of items, starting from the 3rd one
+    alert(rest[0]); // Consul
+    alert(rest[1]); // of the Roman Republic
+    alert(rest.length); // 2
+
+    // Objects desctructuring
+    let options = {
+        title: "Menu",
+        width: 100,
+        height: 200
+    };
+
+    let {title, width, height} = options;
+
+    alert(title);  // Menu
+    alert(width);  // 100
+    alert(height); // 200
+
+    // - - TASKS - -
+    // 1
+    let user = {
+        name: "John",
+        years: 30
+    };
+
+    let {name, years: age, isAdmin = false} = user;
+    alert( name ); 
+    alert( age );
+    alert( isAdmin );
+
+    // 2
+    function topSalary(salaries) {
+
+    let maxSalary = 0;
+    let maxName = null;
+
+    for(const [name, salary] of Object.entries(salaries)) {
+        if (maxSalary < salary) {
+        maxSalary = salary;
+        maxName = name;
+        }
+    }
+
+    return maxName;
+    }
+
+
+</script>

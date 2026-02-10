@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<script>
+    "use strict";
+/*
+    // ordered collection
+    // syntax for creating
+    let arr = new Array();
+    let fruit = ["Apple", "Orange", "Plum"];
+    alert(fruit.length);
+    alert(fruit); // Apple,Orange,Plum
+
+    // mix of values
+    let arr_ = [ 'Apple', { name: 'John' }, true, function() { alert('hello'); } ];
+    arr[3]();
+
+    // Methods pop/push, shift/unshift
+    /* A queue is one of the most common uses of an array
+    push appends an element to the end.
+    shift get an element from the beginning, 
+    advancing the queue, so that the 2nd element 
+    becomes the 1st. */
+    /* Stack
+    push adds an element to the end.
+    pop takes an element from the end.
+    */
+   // methods with END of array
+/*
+    let fruits = ["Apple", "Orange", "Pear"];
+    alert( fruits.pop() ); // remove "Pear" and alert it
+    fruits.push("Pear");
+    alert( fruits ); // Apple, Orange, Pear
+    //methods with BEGINNING of array
+    alert( fruits.shift() ); // remove Apple and alert it
+    fruits.unshift('Apple');
+    alert( fruits ); // Apple, Orange, Pear
+    // Methods push and unshift can add multiple elements at once:
+
+    let a = [1, 2, 3, 4, 5];
+
+    a.length = 2; // truncate to 2 elements
+    alert( a ); // [1, 2]
+
+    a.length = 5; // return length back
+    alert( a [3] ); // undefined: the values do not return
+
+    // Multidimensional arrays
+    let matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+    ];
+    alert( matrix[0][1] ); 
+    
+    // - - TASKS - -
+
+    // task 1: Is array copied?
+    let fruits1 = ["Apples", "Pear", "Orange"];
+    let shoppingCart = fruits1;
+    shoppingCart.push("Banana");
+    alert( fruits1.length ); // Answer will be 4
+*/
+    // task 2: Array operations
+    let styles = ["Jazz", "Blues"]; // 1
+    alert(styles);
+    styles.push("Rock-n-Roll"); // 2
+    alert(styles);
+
+    let mid_len = Math.floor((styles.length-1)/2);
+    styles[mid_len] = "Classics";
+    alert(styles); // 3
+
+    styles.shift();
+    alert(styles); // 4
+
+    styles.unshift("Rap", "Reggae"); // 5
+
+    // task 3: Calling in an array context
+    // Answer: result is a,b,function(){} so it just outputs array
+
+    // task 4: Sum input numbers
+    function sumInput() {
+    let numbers = [];
+    while (true) {
+        let value = prompt("A number please?", 0);
+        if (value === "" || value === null || !isFinite(value)) break;
+        numbers.push(+value);
+    }
+
+    let sum = 0;
+    for (let number of numbers) {
+        sum += number;
+    }
+    return sum;
+    }
+    alert( sumInput() );
+
+    // task 5: A maximal subarray
+    function getMaxSubSum(arr) {
+        let maxSum = 0;
+        let partialSum = 0;
+
+        for (let item of arr) { // for each item of arr
+            partialSum += item; // add it to partialSum
+            maxSum = Math.max(maxSum, partialSum); // remember the maximum
+            if (partialSum < 0) partialSum = 0; // zero if negative
+        }
+
+        return maxSum;
+    }
+    
+    
+
+
+
+
+
+
+
+
+
+
+    
+
+</script>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<script>
+    "use strict";
+    // Symbol.iterator
+    let range = {
+        from: 1,
+        to: 5,
+
+        [Symbol.iterator]() {
+            this.current = this.from;
+            return this;
+        },
+
+        next() {
+            if (this.current <= this.to) {
+            return { done: false, value: this.current++ };
+            } else {
+            return { done: true };
+            }
+        }
+    };
+
+    for (let num of range) {
+    alert(num); // 1, then 2, 3, 4, 5
+    }
+
+    
+    // Calling itearot explicitly
+    let str = "Hello";
+    let iterator = str[Symbol.iterator]();
+
+    while (true) {
+        let result = iterator.next();
+        if (result.done) break;
+        alert(result.value);
+    }
+
+    // Array.from
+    // takes an iterable or array-like value and makes a “real” Array from it.
+    let arrayLike = {
+        0: "Hello",
+        1: "World",
+        length: 2
+    };
+
+    let arr = Array.from(arrayLike); // (*)
+    alert(arr.pop()); // World (method works)
+
+    
+
+
+</script>

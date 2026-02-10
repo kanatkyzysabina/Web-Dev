@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<script>
+    "use strict";
+
+//JSON.stringify(value, replacer, space) - 
+// takes the object and converts it into a string.
+let student = {
+  name: 'John',
+  age: 30,
+  isAdmin: false,
+  courses: ['html', 'css', 'js'],
+  spouse: null
+};
+
+let json = JSON.stringify(student);
+
+alert(typeof json); // we've got a string!
+
+alert(json);
+/* JSON-encoded object:
+{
+  "name": "John",
+  "age": 30,
+  "isAdmin": false,
+  "courses": ["html", "css", "js"],
+  "spouse": null
+}
+*/
+
+
+/*JSON.parse(str[, reviver]) - to decode a JSON-string
+str - string to parse
+reviver - optional function(key,value) that will be called for each pair ( and transform values)*/
+let userData = '{ "name": "John", "age": 35, "isAdmin": false, "friends": [0,1,2,3] }';
+let user = JSON.parse(userData);
+alert( user.friends[1] ); // 1
+//JSON does not support comments. Adding a comment to JSON makes it invalid.
+
+    // - TASKS -
+    // 1
+    let userr = {
+        name: "John Smith",
+        age: 35
+    };
+    let user2 = JSON.parse(JSON.stringify(userr));
+
+    // 2
+    let room = {
+        number: 23
+    };
+
+    let meetup = {
+        title: "Conference",
+        occupiedBy: [{name: "John"}, {name: "Alice"}],
+        place: room
+    };
+
+    room.occupiedBy = meetup;
+    meetup.self = meetup;
+
+    alert( JSON.stringify(meetup, function replacer(key, value) {
+    return (key != "" && value == meetup) ? undefined : value;
+    }));
+
+
+
+</script>

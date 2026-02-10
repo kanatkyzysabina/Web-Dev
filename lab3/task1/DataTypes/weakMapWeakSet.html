@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<script>
+    "use strict";
+    // - - TASKS - -
+
+    // 1
+    let messages = [
+        {text: "Hello", from: "John"},
+        {text: "How goes?", from: "John"},
+        {text: "See you soon", from: "Alice"}
+    ];
+
+    let readMessages = new WeakSet();
+    readMessages.add(messages[0]);
+    readMessages.add(messages[1]);
+
+    readMessages.add(messages[0]);
+    alert("Read message 0: " + readMessages.has(messages[0])); // true
+
+    messages.shift();
+
+    // 2
+    let msgs = [
+    {text: "Hello", from: "John"},
+    {text: "How goes?", from: "John"},
+    {text: "See you soon", from: "Alice"}
+    ];
+
+    let readMap = new WeakMap();
+
+    readMap.set(msgs[0], new Date(2017, 1, 1));
+
+
+</script>

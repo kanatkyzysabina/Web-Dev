@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<script>
+    "use strict";
+    // Date and Time
+
+    // Creation 
+    let now = new Date();
+    alert( now ); // shows current date/time
+    
+    /*
+    new Date(datestring)
+    If there is a single argument, and it’s a string, then it 
+    is parsed automatically. The algorithm is the same as 
+    Date.parse uses, we’ll cover it later.
+    */
+    let date = new Date("2017-01-26");
+    alert(date);
+
+    // new Date(year, month, date, hours, minutes, seconds, ms)
+    new Date(2011, 0, 1, 0, 0, 0, 0); // 1 Jan 2011, 00:00:00]
+
+    // Access 
+    /*
+    - getFullYear()
+    Get the year (4 digits)
+    - getMonth()
+    Get the month, from 0 to 11.
+    - getDate()
+    Get the day of month, from 1 to 31, the name of the method does look a little bit strange.
+    - getHours(), getMinutes(), getSeconds(), getMilliseconds()
+    Get the corresponding time components.
+    */
+
+
+
+</script>
