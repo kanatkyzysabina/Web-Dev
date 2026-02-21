@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background:
+    linear-gradient(to bottom, rgba(255, 192, 213, 0.76), #fce4eccc, rgba(255, 255, 255, 0.59)),
+    url('./assets/images/hearts-bg.jpg');
+  background-attachment: fixed;
+  background-size: auto, 400px;
+  background-repeat: repeat;
+  position: relative;
+}
+
+@font-face {
+  font-family: 'Lucy';
+  src: url('./assets/fonts/Lucy.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}

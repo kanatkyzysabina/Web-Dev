@@ -1,0 +1,22 @@
+<header class="store-header">
+    <h1 class="store-name">Online Toy Store</h1>
+  <p class="store-quote"><em>- Buy, play then throw away -</em></p>
+
+    <div class="header-links">
+      <a href="#">Home</a>
+      <a href="#">Contact</a>
+      <a href="#">More Info</a>
+      <a href="#">Other Projects</a>
+      <a href="#">Donation</a>
+    </div>
+
+</header>
+
+<section class="store">
+
+    <div class="product-grid">
+      @for (product of products; track product.id){
+        <app-product-card [product]="product" />
+      }
+    </div>
+</section>

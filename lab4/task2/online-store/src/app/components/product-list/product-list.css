@@ -1,0 +1,67 @@
+
+
+.store{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.store-header{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(
+      to bottom,
+      #d86aa1,
+      #d86aa1,
+      rgba(216, 106, 161, 0.79),
+      rgba(216, 106, 161, 0.62)
+    );
+
+}
+
+.store-name{
+  margin: 0;
+  padding: 12px;
+  color: beige;
+  font-family: 'Lucy', cursive;
+  font-size: 80px;
+  text-shadow: 0px 2px 6px #510b27;
+}
+
+.store-quote{
+  margin: 0;
+  color: beige;
+  padding: 0;
+  font-size: 14px;
+}
+
+a{
+  font-weight: bolder;
+  text-decoration: none;
+  background: linear-gradient(to bottom, beige, rgba(245, 245, 220, 0.55));
+  padding: 10px;
+  border-radius: 30px;
+  color: #9f1c51;
+  transition: 0.4s;
+}
+a:hover{
+  transform: scale(1.2);
+
+}
+
+.header-links{
+  padding: 60px 0px 20px 0px;
+  display: flex;
+  gap: 45px;
+}
+
+.product-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 0 auto;
+}
