@@ -1,0 +1,17 @@
+
+
+@if(products.length > 0) {
+  <section class="store">
+    <div class="product-grid">
+      @for(product of products; track product.id) {
+        <app-product-card
+          [product]="product"
+          (deleteProduct)="deleteProduct(+$event)" />
+      }
+    </div>
+  </section>
+} @else {
+  <div class="empty">
+    <p>No products in this category yet!</p>
+  </div>
+}

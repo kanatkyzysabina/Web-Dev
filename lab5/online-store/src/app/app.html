@@ -1,0 +1,30 @@
+<header class="store-header">
+  <h1 class="store-name">Online Toy Store</h1>
+  <p class="store-quote"><em>- Buy, play then throw away -</em></p>
+  <div class="header-links">
+    <a href="#">Home</a>
+    <a href="#">Contact</a>
+    <a href="#">More Info</a>
+    <a href="#">Other Projects</a>
+    <a href="#">Donation</a>
+  </div>
+</header>
+
+<nav class="categories">
+  @for(category of categories; track category.id) {
+    <button
+      class="category-btn"
+      [class.active]="selectedCategory?.id === category.id"
+      (click)="selectCategory(category)">
+      {{ category.name }}
+    </button>
+  }
+</nav>
+
+@if(selectedCategory) {
+  <app-product-list [products]="filteredProducts" />
+} @else {
+  <div class="welcome">
+    <p>Welcome to Online Toy Store! Choose toy category!</p>
+  </div>
+}

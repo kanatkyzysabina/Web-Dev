@@ -1,0 +1,95 @@
+.store-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    to bottom,
+    #d86aa1,
+    #d86aa1,
+    rgba(216, 106, 161, 0.79),
+    rgba(216, 106, 161, 0.62)
+  );
+}
+
+.store-name {
+  margin: 0;
+  padding: 12px;
+  color: beige;
+  font-family: 'Lucy', cursive;
+  font-size: 80px;
+  text-shadow: 0px 2px 6px #510b27;
+}
+
+.store-quote {
+  margin: 0;
+  color: beige;
+  padding: 0;
+  font-size: 14px;
+}
+
+.header-links {
+  padding: 60px 0px 20px 0px;
+  display: flex;
+  gap: 45px;
+}
+
+a {
+  font-weight: bolder;
+  text-decoration: none;
+  background: linear-gradient(to bottom, beige, rgba(245, 245, 220, 0.55));
+  padding: 10px;
+  border-radius: 30px;
+  color: #9f1c51;
+  transition: 0.4s;
+}
+
+a:hover {
+  transform: scale(1.2);
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  flex: 1;
+  min-width: 150px;
+  padding: 20px 24px;
+  border: none;
+  border-right: 2px solid rgba(255, 114, 186, 0.3);
+  background: linear-gradient(to bottom, #ecb4d0, #ff72ba);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.category-btn:last-child {
+  border-right: none;
+}
+
+.category-btn:hover {
+  background: linear-gradient(to bottom, #ff72ba, #ffa7d5);
+  color: rgb(130, 17, 61);
+  font-style: italic;
+}
+
+.category-btn.active {
+  background: linear-gradient(to bottom, #c63871, #d86aa1);
+  color: beige;
+}
+
+.welcome {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  padding: 30px;
+  font-size: 25px;
+  color: #e1618e;
+}
