@@ -1,0 +1,53 @@
+.detail {
+  max-width: 600px;
+}
+
+.btn-back {
+  background: none;
+  border: 1px solid #ccc;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.edit-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.title-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  min-width: 200px;
+}
+
+.btn-save {
+  background: #4f8ef7;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.saved-msg {
+  color: green;
+  font-weight: 500;
+}
+
+.btn-photos {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #ff72ad;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}

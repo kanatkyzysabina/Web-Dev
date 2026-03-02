@@ -1,0 +1,27 @@
+@if (loading()) {
+  <p class="loading">Loading album...</p>
+} @else if (album()) {
+  <div class="detail">
+    <button class="btn-back" routerLink="/albums">← Back to Albums</button>
+
+    <h2>Album #{{ album()!.id }}</h2>
+    <p><strong>User ID:</strong> {{ album()!.userId }}</p>
+
+    <div class="edit-section">
+      <label>Title:</label>
+      <!-- [(ngModel)] is two-way binding: input value ↔ editTitle signal -->
+      <input [(ngModel)]="editTitle" class="title-input" />
+      <button class="btn-save" (click)="save()">Save</button>
+      @if (saved()) {
+        <span class="saved-msg">✅ Saved!</span>
+      }
+    </div>
+
+    <a [routerLink]="['/albums', album()!.id, 'photos']" class="btn-photos">
+      View Photos 📷
+    </a>
+  </div>
+} @else {
+  <p>Album not found.</p>
+  <a routerLink="/albums">← Back</a>
+}

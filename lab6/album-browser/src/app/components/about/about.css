@@ -1,0 +1,8 @@
+.about {
+  max-width: 600px;
+}
+
+.about ul {
+  margin-top: 16px;
+  line-height: 2;
+}

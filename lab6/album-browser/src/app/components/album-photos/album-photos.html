@@ -1,0 +1,16 @@
+<button class="btn-back" [routerLink]="['/albums', albumId()]">← Back to Album</button>
+
+<h2>Photos for Album #{{ albumId() }}</h2>
+
+@if (loading()) {
+  <p class="loading">Loading photos...</p>
+} @else {
+  <div class="photo-grid">
+    @for (photo of photos(); track photo.id) {
+      <div class="photo-card">
+        <img [src]="'https://picsum.photos/seed/' + photo.id + '/150'" [alt]="photo.title" />
+        <p class="photo-title">{{ photo.title }}</p>
+      </div>
+    }
+  </div>
+}
